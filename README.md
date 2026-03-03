@@ -15,7 +15,8 @@ For neural network training, go to `nn_training` folder. Generated synthetic dat
 For direct GP inversion and amortized uncertainty estimation, go to `stan_code` folder and `uncertainty_estimate` folder. `gp_inversion.py` can be used for direct GP inversion implemented via `stan`. This code will save `mean_fouling_maps.npy` and `std_fouling_maps.npy`, estimated standard deviations can be used to train the neural network for amortized uncertainty estimation. `uq_training.py` can be used to train the network, and `test_uq_model.py` can be used for testing the model. `uq_plot.py` is for computing the joint log-likelihood across different training sizes.
 
 ## Empirical data evaluation
-For empirical data evaluation, see `empirical_data_evaluation` folder. `fouling_localization.py` will require measurement files from a clean and a fouled pipe to extract **attenuation ratios**, and estimate fouling distribution using our amortized network. For empirical data acquisition, contact to [Electronics Research Laboratory]([https://example.com](https://electronics.physics.helsinki.fi/))
+For empirical data evaluation, see `empirical_data_evaluation` folder. `fouling_localization.py` will require measurement files from a clean and a fouled pipe to extract **attenuation ratios**, and estimate fouling distribution using our amortized network. For empirical data acquisition, please contact to [Electronics Research Laboratory]([https://example.com](https://electronics.physics.helsinki.fi/)).
+
 
 ![Illustration of synthetic data generation and neural network training ](./real_time_tomography.jpg)
 
