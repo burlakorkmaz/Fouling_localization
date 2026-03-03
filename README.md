@@ -2,12 +2,20 @@
 This repository implements our fouling localization method.
 
 ## Introduction
-<pre>
 We proposed a method for real-time estimation of fouling distribution inside a closed metal structure (pipeline) by analysing the changes in ultrasonic waves caused by the fouled area on the structure's surface. For this aim, we built an amortized inference method using neural networks. Our network is trained solely on synthetic data, however tested on empirical data acquired from laboratory setting. 
 
-
 TODO: Put an figure here
-</pre>
+
+## Data
+For synthetic data generation, go to the `simulate_data` folder. `create_B_Dx_Dy.py` generates the ultrasonic trajectory matrices to compute integral observations between fouling maps and trajectories, and distance matrices to be used in the kernel function for fouling map generation. `create_maps.py` generates **fouling maps** from a Gaussian process (GP) prior. `create_ratios.py` computes **attenuation ratios** using integral observations (also defined and overlaps). 
+
+For empirical data acquisition, contact to [Electronics Research Laboratory]([https://example.com](https://electronics.physics.helsinki.fi/))
+
+
+## Experiments
+For neural network training, go to `nn_training` folder. Generated synthetic data (**fouling maps** and **attenuation ratios**) should be in `dataset` folder. Model training and testing can be done using `train_model.py` and `test_model.py`.
+
+For direct GP inversion and amortized uncertainty estimation, go to `stan_code` folder and `uncertainty_estimate` folder. `gp_inversion.py` can be used for direct GP inversion implemented via `stan`. This code will save `mean_fouling_maps.npy` and `std_fouling_maps.npy`, estimated standard deviations can be used to train the neural network for amortized uncertainty estimation. `uq_training.py` can be used to train the network, and `test_uq_model.py` can be used for testing the model. `uq_plot.py` is for computing the joint log-likelihood across different training sizes.
 
 ## Requirements
 <pre>
@@ -23,19 +31,7 @@ This project uses the following Python packages:
 </pre>
 
 
-## Data
-<pre>
-For synthetic data generation, go to the `simulate_data` folder. `create_B_Dx_Dy.py` generates the ultrasonic trajectory matrices to compute integral observations between fouling maps and trajectories, and distance matrices to be used in the kernel function for fouling map generation. `create_maps.py` generates **fouling maps** from a Gaussian process (GP) prior. `create_ratios.py` computes **attenuation ratios** using integral observations (also defined and overlaps). 
 
-For empirical data acquisition, contact to [Electronics Research Laboratory]([https://example.com](https://electronics.physics.helsinki.fi/))
-</pre>
-
-## Experiments
-<pre>
-For neural network training, go to `nn_training` folder. Generated synthetic data (**fouling maps** and **attenuation ratios**) should be in `dataset` folder. Model training and testing can be done using `train_model.py` and `test_model.py`.
-
-For direct GP inversion and amortized uncertainty estimation, go to `stan_code` folder and `uncertainty_estimate` folder. `gp_inversion.py` can be used for direct GP inversion implemented via `stan`. This code will save `mean_fouling_maps.npy` and `std_fouling_maps.npy`, estimated standard deviations can be used to train the neural network for amortized uncertainty estimation. `uq_training.py` can be used to train the network, and `test_uq_model.py` can be used for testing the model. `uq_plot.py` is for computing the joint log-likelihood across different training sizes.
-</pre>
 
 ## Folder Structure
 <pre>
