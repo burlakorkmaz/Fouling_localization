@@ -4,7 +4,7 @@ This repository implements our fouling localization method.
 ## Introduction
 We proposed a method for real-time estimation of fouling distribution inside a closed metal structure (pipeline) by analysing the changes in ultrasonic waves caused by the fouled area on the structure's surface. For this aim, we built an amortized inference method using neural networks. Our network is trained solely on synthetic data, however tested on empirical data acquired from laboratory setting. 
 
-TODO: Put an figure here
+![Illustration of synthetic data generation and neural network training ](./nn_training.jpg)
 
 ## Data
 For synthetic data generation, go to the `simulate_data` folder. `create_B_Dx_Dy.py` generates the ultrasonic trajectory matrices to compute integral observations between fouling maps and trajectories, and distance matrices to be used in the kernel function for fouling map generation. `create_maps.py` generates **fouling maps** from a Gaussian process (GP) prior. `create_ratios.py` computes **attenuation ratios** using integral observations (also defined as overlaps). 
