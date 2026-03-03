@@ -7,7 +7,7 @@ We proposed a method for real-time estimation of fouling distribution inside a c
 TODO: Put an figure here
 
 ## Data
-For synthetic data generation, go to the `simulate_data` folder. `create_B_Dx_Dy.py` generates the ultrasonic trajectory matrices to compute integral observations between fouling maps and trajectories, and distance matrices to be used in the kernel function for fouling map generation. `create_maps.py` generates **fouling maps** from a Gaussian process (GP) prior. `create_ratios.py` computes **attenuation ratios** using integral observations (also defined and overlaps). 
+For synthetic data generation, go to the `simulate_data` folder. `create_B_Dx_Dy.py` generates the ultrasonic trajectory matrices to compute integral observations between fouling maps and trajectories, and distance matrices to be used in the kernel function for fouling map generation. `create_maps.py` generates **fouling maps** from a Gaussian process (GP) prior. `create_ratios.py` computes **attenuation ratios** using integral observations (also defined as overlaps). 
 
 For empirical data acquisition, contact to [Electronics Research Laboratory]([https://example.com](https://electronics.physics.helsinki.fi/))
 
