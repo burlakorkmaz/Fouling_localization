@@ -33,8 +33,10 @@ This project uses the following Python packages:
 - nest_asyncio
 </pre>
 
-
-
+## Citation
+<pre>
+Here will be updated upon publication.  
+</pre>
 
 ## Folder Structure
 <pre>
@@ -85,9 +87,4 @@ This project uses the following Python packages:
     ├── test_uq_model.py
     ├── uq_plot.py
     ├── uq_training.py
-</pre>
-
-## Citation
-<pre>
-Here will be updated upon publication.  
 </pre>
