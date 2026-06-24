@@ -34,8 +34,15 @@ This project uses the following Python packages:
 </pre>
 
 ## Citation
+Link to paper: [https://dl.acm.org/doi/abs/10.1145/3801966](https://dl.acm.org/doi/abs/10.1145/3801966)
 <pre>
-Here will be updated upon publication.  
+@article{korkmaz2026physical,
+  title={Physical Simulator-Based Neural Networks for Real-Time Fouling Tomography},
+  author={Korkmaz, Burla Nur and Gharib, Shayan and Wei, Haoyu and Korsimaa, Julius and Salminen, Petteri and Weber, Martin and Iablonskyi, Denys and Salmi, Ari and Klami, Arto},
+  journal={ACM Transactions on Probabilistic Machine Learning},
+  year={2026},
+  publisher={ACM New York, NY}
+} 
 </pre>
 
 ## Folder Structure
